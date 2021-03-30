@@ -15,3 +15,7 @@ services:
     depends_on: 
       - servidor
 
+  user-service:
+    build: ./user-service
+    volumes: 
+      - ./user-service/credentials.json:/app/credentials.json
