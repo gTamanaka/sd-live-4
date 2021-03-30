@@ -19,3 +19,8 @@ services:
     build: ./user-service
     volumes: 
       - ./user-service/credentials.json:/app/credentials.json
+
+  sensor-service:
+    build: ./sensor-service
+    volumes: 
+      - ./user-service/credentials.json:/app/credentials.json

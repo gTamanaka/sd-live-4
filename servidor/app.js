@@ -48,15 +48,15 @@ app.post("/salvar-leituras", async (req, res, next) => {
   }
 });
 
-app.post("/create-sensor", async (req, res, next) => {
-  try {
-    await db.collection("sensors").doc(req.body.sensor).set({});
-    res.status(200).send("Sensor Created")
-  } catch (error) {
-    console.log(error)
-    res.status(400).send("Failed to create Sensor")
-  }
-});
+// app.post("/create-sensor", async (req, res, next) => {
+//   try {
+//     await db.collection("sensors").doc(req.body.sensor).set({});
+//     res.status(200).send("Sensor Created")
+//   } catch (error) {
+//     console.log(error)
+//     res.status(400).send("Failed to create Sensor")
+//   }
+// });
 
 app.listen(3000, async () => {
   console.log("Web Server Up");
