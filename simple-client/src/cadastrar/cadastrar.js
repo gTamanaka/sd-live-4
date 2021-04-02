@@ -11,7 +11,7 @@ const Cadastrar = () => {
       
       console.log(user, pwd, email);
       event.preventDefault();
-      let resp = await axios.post(`http://${window.location.hostname}:3000/cadastrar`, {
+      let resp = await axios.post(`http://${window.location.hostname}/user/cadastrar`, {
         user: user,
         pwd: pwd,
         email: email,

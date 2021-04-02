@@ -1,19 +1,16 @@
 version: "3.2"
 services: 
-  cliente:
-    build: ./simple-client
+
+  nginx:
+    image: nginx
+    volumes: 
+      - ./nginx:/etc/nginx/conf.d
     ports:
       - 80:80
 
-  servidor:
-    build: ./servidor
-    ports:
-      - 3000:3000
+  cliente:
+    build: ./simple-client
 
-  fake-consume:
-    build: ./fake-consumer
-    depends_on: 
-      - servidor
 
   user-service:
     build: ./user-service
