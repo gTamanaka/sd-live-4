@@ -10,7 +10,7 @@ export default function App() {
     <Router>
       <div>
         <nav>
-          <div>Faz de conta que é um logo</div>
+          <div>SD</div>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -33,6 +33,7 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <main>
+          <article className={"main-article"}>
           <Switch>
           <Route path="/config">
             <Config></Config>
@@ -50,6 +51,7 @@ export default function App() {
               <Home />
             </Route>
           </Switch>
+          </article>
         </main>
       </div>
     </Router>

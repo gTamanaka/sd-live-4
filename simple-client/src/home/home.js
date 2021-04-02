@@ -15,9 +15,7 @@ const Home = () => {
   //   } else {
   //       console.log("Exist")
   //   }
-  const [user, setUser] = useState(
-    "Por favor realize o seu cadastro ou faça login"
-  );
+  const [user, setUser] = useState("Olá visitante");
 
   useEffect(() => {
     if (firebase.apps.length === 0) {
@@ -43,8 +41,13 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Bem vindo a SD Live 4</h1>
+      <h1 className={"main-title"}>Bem vindo a SD Live 4</h1>
       <p>{user}</p>
+      <p>Está é aplicação que temos desenvolvido em Sistemas Distribuídos</p>
+      <p>Para mais informações verifique as aulas gravadas e os slides</p>
+      <a className={"btn__onedrive"}href="https://alunounivespbr-my.sharepoint.com/:f:/g/personal/gustavo_tamanaka_cursos_univesp_br/EihgXcWiaNhFjnl_CcnAYA8BW8L_3eo2KLDjBZbDeBKhCA?e=cpyPhy">
+        Ir para o One Drive
+      </a>
     </div>
   );
 };

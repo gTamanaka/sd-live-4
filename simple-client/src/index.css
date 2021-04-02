@@ -7,8 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 :root{
-  --main-color: lightcoral;
-  --second-color: lightgreen;
+  --main-color: #0057d9;
+  --second-color: orange;
 }
 
 
@@ -33,14 +33,80 @@ nav > ul > li{
 }
 nav > ul > li > a{
   text-decoration: none;
-  color: white; 
+  color: white ;
+  font-weight: 600;
 }
 nav > ul > li :hover{
-  color: red; 
+  color: var(--second-color); 
 }
 
 main{
   display: flex;
   justify-content: center;
   width: 100%;
+  background-color: lightgray;
+  height: calc(100vh - 67px);
+}
+
+.main-article{
+  background-color: white;
+  padding: 0 16px;
+  margin: 8px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.main-title{
+  font-size: 3em;
+  color: var(--main-color);
+}
+h1{
+  color: var(--main-color);
+  font-size: 2em;
+}
+.btn__onedrive{
+  padding: 16px 32px;
+  background-color: var(--second-color);
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color ease-in 300ms;
+}
+
+.btn__onedrive:hover{
+  background-color: var(--main-color);
+}
+
+button{
+  padding: 8px 16px;
+  background-color: var(--second-color);
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color ease-in 300ms;
+  border: none;
+}
+
+button:hover{
+  background-color: var(--main-color);
+
+}
+
+form{
+  display: grid;
+  max-width: 200px;
+}
+
+input{
+  padding: 8px;
+  border: solid 1px var(--main-color);
+  border-radius: 3px;
+}
+input:last-child{
+  margin-bottom: 10px;
+}
+input:focus{
+  border: solid 1px var(--second-color);
+  outline: none
 }

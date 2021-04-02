@@ -25,7 +25,9 @@ const Cadastrar = () => {
 
   return (
     <article>
+      <h1>Cadastrar novo usuário</h1>
       <form onSubmit={handleSubmit}>
+        <h2>Novo usuário</h2>
         <div>
           <label>Nome</label>
           <input
