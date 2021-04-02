@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Cadastrar from "./cadastrar/cadastrar";
 import Leituras from "./leituras/leituras";
 import Login from "./login/login";
-
+import Home from "./home/home"
+import { Config } from "./config/config";
 export default function App() {
   return (
     <Router>
@@ -23,6 +24,9 @@ export default function App() {
             <li>
               <Link to="/cadastrar">Cadastrar</Link>
             </li>
+            <li>
+              <Link to="/config">Config</Link>
+            </li>
           </ul>
         </nav>
 
@@ -30,6 +34,9 @@ export default function App() {
             renders the first one that matches the current URL. */}
         <main>
           <Switch>
+          <Route path="/config">
+            <Config></Config>
+            </Route>
             <Route path="/cadastrar">
               <Cadastrar></Cadastrar>
             </Route>
@@ -49,6 +56,3 @@ export default function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}

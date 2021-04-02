@@ -48,18 +48,18 @@ const Login = () => {
       new firebaseui.auth.AuthUI(firebase.auth());
     ui.start("#firebaseui-auth-container", uiConfig);
 
-    firebase
-      .auth()
-      .signInAnonymously()
-      .then(() => {
-        // Signed in..
-        console.log("Anonimus")
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-      });
+    // firebase
+    //   .auth()
+    //   .signInAnonymously()
+    //   .then(() => {
+    //     // Signed in..
+    //     console.log("Anonimus")
+    //   })
+    //   .catch((error) => {
+    //     var errorCode = error.code;
+    //     var errorMessage = error.message;
+    //     // ...
+    //   });
   }, []);
 
   return (
